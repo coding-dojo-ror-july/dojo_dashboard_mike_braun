@@ -1,3 +1,9 @@
+<h1> Listing <%= pluralize(@dojos.count, "Dojo") %> </h1>
+
+<% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+<% end %>
+
 <h1>Dojo Listings</h1>
 
 <table>
@@ -18,3 +24,5 @@
 		<% end %>
 	</tbody>
 </table>
+
+<%= link_to "New Dojo", new_dojo_path %>
